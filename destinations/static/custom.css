@@ -1,0 +1,47 @@
+
+.list_text {
+	text-shadow: 1px 1px 5px #000;
+	font-style: bold;
+	font-size: 3em;
+
+
+}
+
+.text_1 {
+
+	color: #262626;
+}
+
+.des {
+	  
+	font-style: italic;
+	color: white;
+	font-style: bold;
+	font-size: 1.1em;
+	text-shadow: 1px 1px 4px black;
+
+
+	
+}
+
+.pic{
+	transition: 1s all;
+
+}
+
+.pic:hover{
+
+	background: #262626;
+}
+
+
+.activities {
+	font-style: italic;
+}
+
+
+body {
+	background-image: url(https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+}
