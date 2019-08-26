@@ -34,7 +34,7 @@ def destination_update(request, destination_id):
     destination_obj = Destination.objects.get(id=destination_id)
     form = DestinationForm(instance=destination_obj)
     if request.method == "POST":
-        form = DestinationForm(request.POST, instance=destination_obj)
+        form = DestinationForm(request.POST, request.FILES, instance=destination_obj)
         if form.is_valid():
             form.save()
             return redirect('destination-list')

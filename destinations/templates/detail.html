@@ -8,8 +8,8 @@
         <h1 class = "text-capitalize">{{destination.name}}</h1>
         <p><img src="{{destination.pretty_picture.url}}" class ="img-fluid" alt="responsive image"></p>
         <p class="activities text-capitalize">Recommended Activities: {{destination.activities}}</p>
-        <h4>{{destination.description}}</h4>
-        <p class = "text-capitalize">{{destination.optimal_visiting_season}}</p>
+        <h4 class="lead">{{destination.description}}</h4>
+        <p class = "text-capitalize">Best time to visit: {{destination.optimal_visiting_season}}</p>
         <a href="{% url 'destination-update' destination.id %}">
         <button type="button" class="btn btn-primary btn-lg">Update</button>
         </a>
