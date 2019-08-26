@@ -1,12 +1,13 @@
 {% extends "base.html" %} 
 
-{% block title %}List{% endblock title %}
+{% block title %}Our Destinations{% endblock title %}
 
 {% block content %}
 <br>
 <div class ="row">
   {% for destination in destinations reversed %}
 	  <div class="col-12 col-md-6 col-xl-6">
+	  	<section class= "cardz">
 		  <div class="card bg-dark text-white mb-5">
 		    <img class="card-img" src="{{destination.pretty_picture.url}}" width="auto" height="350"/>
 		    <div class="card-img-overlay pic">
@@ -15,6 +16,7 @@
 			 	 <a href="{% url 'destination-detail' destination.id %}" class="btn btn-warning">Explore more!</a>
 		 	</div>
 		  </div>
+		</section>
 		</div>
   {% endfor %}
 </div>

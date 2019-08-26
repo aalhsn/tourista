@@ -1,21 +1,24 @@
 {% extends "base.html" %} 
 
-{% block title %}Detail{% endblock title %} 
+{% block title %}{{destination.name}}{% endblock title %} 
 
 {% block content %}
 <div class = "jumbotron">
-    <div class= "container my-4">
+    <div class= "container">
+        <section class= "float-right">
+            <button type="button" class="btn btn-primary">Update</button>
+            </a>
+            <a href="{% url 'destination-delete' destination.id %}">
+                <button type="button" class="btn btn-outline-danger">Delete</button>
+            </a>
+        </section>
         <h1 class = "text-capitalize">{{destination.name}}</h1>
         <p><img src="{{destination.pretty_picture.url}}" class ="img-fluid" alt="responsive image"></p>
         <p class="activities text-capitalize">Recommended Activities: {{destination.activities}}</p>
         <h4 class="lead">{{destination.description}}</h4>
         <p class = "text-capitalize">Best time to visit: {{destination.optimal_visiting_season}}</p>
         <a href="{% url 'destination-update' destination.id %}">
-        <button type="button" class="btn btn-primary btn-lg">Update</button>
-        </a>
-        <a href="{% url 'destination-delete' destination.id %}">
-            <button type="button" class="btn btn-lg btn-outline-danger">Delete</button>
-        </a>
+        
     </div>
 </div>
 {% endblock content %}

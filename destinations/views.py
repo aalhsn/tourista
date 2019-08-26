@@ -49,3 +49,11 @@ def destination_delete(request, destination_id):
     destination_obj = Destination.objects.get(id=destination_id)
     destination_obj.delete()
     return redirect('destination-list')
+
+def home_view(request):
+    context = {
+
+        'title': "",
+
+    }
+    return render(request,'home.html',context)
